@@ -1,5 +1,6 @@
-package SpinnerNeitTasks;
+package SpinnerNeit;
 
+import org.powerbot.script.Tile;
 import org.powerbot.script.rt6.Bank;
 import org.powerbot.script.rt6.ClientContext;
 import org.powerbot.script.rt6.Item;
@@ -20,8 +21,8 @@ public class BankNeit extends Task{
 
 	@Override
 	public void execute() {
-		if(bank.nearest().tile().distanceTo(ctx.players.local().tile())>10){
-		ctx.movement.step(bank.nearest());
+		if(new Tile(2337, 3806,0).distanceTo(ctx.players.local().tile())>10){
+		ctx.movement.step(new Tile(2337, 3806,0));
 		sleep(1232);}
 		
 		if(!bank.opened()&&this.scriptRunning){
@@ -32,7 +33,7 @@ public class BankNeit extends Task{
 	/*	while(!bank.open()){
 			sleep(100);
 		}*/
-		if(true&&this.scriptRunning&&bank.opened()){
+	if(true&&this.scriptRunning&&bank.opened()){
 			bank.depositInventory();
 			System.out.println("Deposited");
 			sleep(1453);
