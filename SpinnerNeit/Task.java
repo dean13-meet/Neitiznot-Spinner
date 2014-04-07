@@ -1,4 +1,4 @@
-package SpinnerNeitTasks;
+package SpinnerNeit;
 
 import org.powerbot.script.rt6.Bank;
 import org.powerbot.script.rt6.ClientAccessor;
