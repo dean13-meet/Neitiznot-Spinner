@@ -1,4 +1,4 @@
-package SpinnerNeitTasks;
+package SpinnerNeit;
 
 import org.powerbot.script.rt6.ClientContext;
 
@@ -32,6 +32,10 @@ public class Spin extends Task{
 
 	@Override
 	public void execute() {
+		if(wheel.tile().distanceTo(ctx.players.local().tile())>10){
+			ctx.movement.step(wheel);
+			sleep(1232);}
+		
 		if(!ctx.widgets.component(widget, child).visible()){
 			
 		
@@ -61,7 +65,7 @@ public class Spin extends Task{
 			
 		case 1:
 			System.out.println("AB: Changing camera pitch");
-			ctx.camera.pitch((int)(Math.random()*100));
+			ctx.camera.pitch((int)(Math.max(Math.random()*100,35*(1+Math.random()))));
 			break;
 		
 		case 2:
