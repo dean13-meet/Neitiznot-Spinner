@@ -1,4 +1,4 @@
-package SpinnerNeitTasks;
+package SpinnerNeit;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -20,8 +20,6 @@ import org.powerbot.script.Script.Manifest;
 import org.powerbot.script.rt6.ClientContext;
 import org.powerbot.script.rt6.GeItem;
 
-import sun.net.www.protocol.http.HttpURLConnection;
-
 @Manifest(name = "SpinnerNeit", description = "short description of your script")
 public class SpinnerNeit  extends PollingScript<ClientContext> implements MessageListener, PaintListener{
 
@@ -41,10 +39,11 @@ public class SpinnerNeit  extends PollingScript<ClientContext> implements Messag
 	public void repaint(Graphics g) {
 		spinned = (ctx.skills.experience(ctx.skills.CRAFTING) - originalXp)/15;
 		timerun = System.currentTimeMillis() - this.originalTime;
-		Date time = new Date((long) timerun);
+		Date time = new Date((long) this.getRuntime());
 		int hours = time.getHours();
 		int min = time.getMinutes();
 		int sec = time.getSeconds();
+		
 
 		g.setColor(Color.WHITE);
 	    g.setFont(new Font("Tahoma", Font.BOLD, 16));
