@@ -1,5 +1,6 @@
-package SpinnerNeitTasks;
+package SpinnerNeit;
 
+import org.powerbot.script.Tile;
 import org.powerbot.script.rt6.ClientContext;
 
 public class walkBack extends Task{
@@ -17,7 +18,7 @@ public class walkBack extends Task{
 	@Override
 	public void execute() {
 		System.out.println("Going back");
-		ctx.movement.step(bank.nearest());//new Tile(2354, 3796, 0));
+		ctx.movement.step(new Tile(2337, 3806,0));//new Tile(2354, 3796, 0));
 		sleep(4320);
 		
 	}
