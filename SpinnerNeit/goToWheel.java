@@ -1,4 +1,4 @@
-package SpinnerNeitTasks;
+package SpinnerNeit;
 
 import org.powerbot.script.Tile;
 import org.powerbot.script.rt6.ClientContext;
